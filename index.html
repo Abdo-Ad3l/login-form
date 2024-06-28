@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form>
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Enter Your UserName" />
+      <label for="username" onclick="expend(this)">USERNAME</label>
+
+      <input type="password" id="password" placeholder="Enter Your password" />
+      <label for="password" onclick="expend(this)">PASSWORD</label>
+
+      <button>SUBMIT</button>
+    </form>
+    <script>
+      function expend(lbl) {
+        var elemId = lbl.getAttribute("for");
+        document.getElementById(elemId).style.height = "45px";
+        document.getElementById(elemId).classList.add("my-style");
+
+        lbl.style.transform = "translateY(-45px)";
+      }
+    </script>
+  </body>
+</html>
